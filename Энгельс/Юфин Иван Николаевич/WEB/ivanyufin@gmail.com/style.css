@@ -1,0 +1,994 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    color: #212529;
+}
+
+header {
+    height: 178px;
+}
+
+.head, .menu {
+    padding: 25px 0 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1140px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.header_title_container {
+    display: inline-block;
+    margin-left: -24px;
+    margin-right: 118px;
+}
+
+.header_title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.header_title_license {
+    font-size: 11px;
+}
+
+.citiselect, .header_button {
+    display: inline-block;
+}
+
+.header_button {
+    cursor: pointer;
+}
+
+.citiselect {
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #999999;
+    border-radius: 23px;
+    padding: 0 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-appearance: none;
+    background-color: white;
+    margin-right: 70px;
+    background: url(img/arr.png) 87% / 6% no-repeat;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header_button {
+    line-height: 45px;
+    width: 200px;
+    border: 1px solid #813f8e;
+    text-align: center;
+    color: white;
+    background-color: #813f8e;
+    text-transform: uppercase;
+    border-radius: 23px;
+}
+
+.menu {
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.menu .main_picture {
+    margin-right: 15px;
+}
+
+.menu ul {
+    display: inline-block;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu_selected_item {
+    background-color: #fee500;
+    border: 1px solid #fee500;
+    border-radius: 23px;
+}
+
+.menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #1e0f00;
+    line-height: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 2px;
+}
+
+.menu ul li a:hover:not(.phone, .menu_selected_item) {
+    border: 1px solid #999999;
+    border-radius: 23px;
+}
+
+.menu ul li .phone {
+    font-weight: bold;
+
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 100vh;
+    min-width: 320px
+}
+
+.main_body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-center {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.text-center h2{
+    font-size: 30px;
+    font-family: 'PFAgoraSlabProBold', sans-serif;
+    font-weight: bold;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #212529;
+    min-width: 100%;
+}
+
+
+/*----------slider---------*/
+.slider {
+    width: 100vw;
+    height: 450px;
+    background-color: #fee500;
+    overflow: hidden;
+    position: relative;
+    color: black;
+}
+
+.container_slider {
+    position: relative;
+    height: 100%;
+}
+
+.container_body {
+    height: 100%;
+    white-space: nowrap;
+    display: flex;
+    transition: transform 1s;
+    align-items: center;
+    position: relative;
+    width: 83%;
+    padding-left: 10%;
+}
+
+.item {
+    min-width: 100%;
+    font-family: 'PFAgoraSlabProBold', Arial;
+    white-space: normal;
+    text-align: left;
+    display: flex;
+    transition: opacity 1s;
+}
+
+.item:not(.active_item) {
+    opacity: 0;
+}
+
+.active_item {
+    opacity: 1;
+}
+
+.item_header {
+    font-family: 'PFAgoraSlabProBold', Arial;
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.item_body {    
+    font-family: "Montserrat";
+    font-size: 26px;
+    padding: 20px 0;
+}
+
+.item img {
+    max-width: 380px;
+    max-height: 350px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.item_text {
+    flex-wrap: wrap;
+}
+
+.carousel_button_prev, .carousel_button_next {
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 15%;
+    height: 450px;
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    text-align: center;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+.carousel_button_prev:hover, .carousel_button_next:hover {
+    opacity: 1;
+}
+
+.carousel_button_prev_icon, .carousel_button_next_icon {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel_button_prev_icon {
+    width: 20px;
+    height: 20px;
+    background: url(img/arr_left.png) no-repeat 50%/100% 100%;
+}
+
+.carousel_button_next_icon {
+    width: 20px;
+    height: 20px;
+    background: url(img/arr_right.png) no-repeat 50%/100% 100%;
+}
+
+.carousel_button_next {
+    right: 0;
+}
+
+.carouselIndicators {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.carouselIndicators li {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin-left: 3px;
+    margin-right: 3px;
+    transition: opacity .6s ease;
+}
+
+.carouselIndicators li:not(.active) {
+    opacity: .5;
+}
+
+.active {
+    opacity: 1;
+}
+
+.carousel_link a{
+    display: block;
+    width: 200px;
+    line-height: 45px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #813f8e;
+    border-radius: 23px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #813f8e;
+    font-family: "Montserrat";
+}
+
+.carousel_link a:hover {
+    background-image: linear-gradient(to right,#813f8e,#813f8e 16.65%,#fee500 16.65%,#fee500 33.3%,#813f8e 33.3%,#813f8e 49.95%,#fee500 49.95%,#fee500 66.6%,#813f8e 66.6%,#813f8e 83.25%,#fee500 83.25%,#fee500 100%,#813f8e 100%);
+    animation: slidebg 2s linear infinite;
+}
+
+
+
+@keyframes slidebg {to {background-position:200px;}}
+/*----------slider---------*/
+
+
+.steps {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    display: block;
+}
+
+.main_steps {
+    width: 1200px;
+    height: 347px;
+    margin: 0 auto;
+}
+
+.main_steps_item {
+    float: left;
+    height: 347px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    position: relative;
+}
+
+.row_courses {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.youtube {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.youtube::before {
+    padding-top: 56.25%;
+    display: block;
+    content: "";
+}
+
+.youtube_item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.main_courses {
+    padding: 30px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+/*------courses----*/
+
+
+.courses_item {
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    width: 350px;
+    color: black;
+    padding-top: 30px;
+    border-radius: .25rem;
+    /*margin: 0 15px;*/
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.courses_item:hover {
+    box-shadow: 0px 7px 15px #cccccc;
+}
+
+.courses_item_inner {
+    display: flex;
+    flex-direction: column;
+    min-width: 333px;
+}
+
+.courses_item_inner img{
+    width: 123px;
+    height: 123px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.courses_item_inner_text {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.courses_item_inner_header {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    line-height: 1.5;
+    border-bottom: 1px solid #cccccc;
+    height: 135px;
+    margin: 0 15px;
+}
+
+.courses_item_inner_bottom {
+    font-family: 'Montserrat', sans-serif;
+    padding: .25rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+}
+
+.text_left {
+    float: left;
+    font-size: 12px;
+}
+
+.text_right {
+    float: right;
+    font-size: 13px;
+    font-weight: bold;
+}
+/*------courses----*/
+
+
+/*------registration_block------*/
+
+.registration_block {
+    display: block;
+    width: 40%;
+}
+
+.registration {
+    background-color: #fee500;
+    max-width: 285px;
+    color: #212529;
+}
+
+.registration_inner_block {
+    padding: 35px 30px 25px 30px;
+}
+
+.registration_title {
+    font-family: 'PFAgoraSlabProBold';
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 22px;
+    padding-bottom: 40px;
+}
+
+.registration_form_text {
+    font-size: 13px;
+    width: 100%;
+    line-height: 42px;
+    height: 42px;
+    border: 1px solid #b9b9b9;
+    border-radius: 21px;
+    text-align: left;
+    padding: 0 20px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+.registration_form_button {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-size: 13px;
+    padding-top: 2px;
+    line-height: 42px;
+    border: 1px solid #813f8e;
+    border-radius: 21px;
+    text-align: center;
+    color: white;
+    background-color: #813f8e;
+    text-transform: uppercase;
+    margin: 10px auto;
+}
+
+.registration_bottom {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: justify;
+    padding: 10px 0;
+}
+
+.registration_bottom a {
+    color: #813f8e;
+}
+
+.courses_link {
+    color: #813f8e;
+    display: block;
+    text-align: center;
+    padding: 80px 0;
+    background-color: #e0e0e0;
+    font-family: 'PFAgoraSlabProBold', Arial;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    margin-top: 30px;
+}
+
+.courses_link:hover {
+    text-decoration: none;
+}
+
+/*------registration_block------*/
+
+
+
+/*------target_block------*/
+
+.target_block {
+    background-color: #f7f7f7;
+    padding: 75px 0;
+    width: 100%;
+}
+
+.target_inner_left_block {
+    font-family: 'PFAgoraSlabProBold', Arial;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: left;
+    max-width: 50%;
+}
+
+.target_text {
+    font-weight: bold;
+    font-family: 'PFAgoraSlabProBold', Arial;
+}
+
+.target_list ul{
+    padding: 0;
+}
+
+.target_list ul li {
+    list-style-image: url('img/darr.png');
+    list-style-position: inside;
+    font-family: 'Montserrat', Arial;
+    font-size: 1rem;
+}
+
+.target_inner_right_block {
+    padding-left: 15px;
+    max-width: 50%;
+}
+
+.target_bottom_block {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.target_bottom_block img {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: auto;
+}
+
+/*------target_block------*/
+
+
+/*------news_block------*/
+
+.news_link {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all .3s ease;
+}
+
+.news_link:hover {
+    margin-top: -10px;
+    box-shadow: 0px 0px 30px #e0e0e0;
+}
+
+.news_link_item {
+    position: relative;
+    width: 340px;
+    height: 300px;
+    background-color: white;
+    text-align: left;
+    overflow: hidden;
+}
+
+.news_link_item_date {
+    width: 100%;
+    padding: 18px 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.2px;
+}
+
+.news_link_item_title_box {
+    width: 288px;
+    margin: 0 26px;
+    background-color: #f8e81c;
+}
+
+.news_link_item_title {
+    padding: 15px 22px;
+    font-family: 'PFAgoraSlabProBold';
+    font-size: 20px;
+    text-align: center;
+}
+
+.news_link_item_bottom {
+    font-size: 13px;
+    margin: 20px 33px 30px 33px;
+    width: 274px;
+}
+
+.news_more_link {
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    font-family: 'PFAgoraSlabProBold', Arial;
+    font-size: 16px;
+}
+
+/*------news_block------*/
+
+
+
+/*------faq_block------*/
+
+
+.faq_picture {
+    min-width: 226px;
+    min-height: 260px;
+    background: url('img/faq.png') center no-repeat;
+    width: 546px;
+    height: 515px;
+}
+
+.faq_block {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.faq_block_title {
+    text-transform: uppercase;
+    font-family: 'PFAgoraSlabProBold', Arial;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.faq_block ul {
+    padding: 0;
+}
+
+.faq_block ul li {
+    list-style-image: url('img/darr.png');
+    padding: 7px 0;
+    font-weight: bold;
+}
+
+.faq_block_sub {
+    font-size: 18px;
+    padding: 20px 0;
+    line-height: 1.5;
+}
+
+.faq_sub_phone {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.faq_block_sub a:not(.faq_sub_phone) {
+    color: #90569c;
+}
+
+
+/*------faq_block------*/
+
+/*------course_block------*/
+
+.course {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.course_inner_block {
+    width: 50%;
+}
+
+.course_picture {
+    min-width: 226px;
+    min-height: 260px;
+    background: url('img/global_cta.png') center no-repeat;
+    width: 546px;
+    height: 515px;
+}
+
+.course_block {
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.course_block_title {
+    text-transform: uppercase;
+    font-family: 'PFAgoraSlabProBold', Arial;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.course_form_button {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-size: 13px;
+    padding-top: 2px;
+    line-height: 42px;
+    border: 1px solid #813f8e;
+    border-radius: 21px;
+    text-align: center;
+    color: white;
+    background-color: #813f8e;
+    text-transform: uppercase;
+    margin-top: 10px;
+    max-width: 305px;
+}
+
+.course_form_text {
+    font-size: 13px;
+    width: 100%;
+    line-height: 42px;
+    height: 42px;
+    border: 1px solid #b9b9b9;
+    border-radius: 21px;
+    text-align: left;
+    padding: 0 20px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    max-width: 305px;
+}
+
+.course_bottom {
+    font-size: 11px;
+    line-height: 15px;
+    text-align: justify;
+    padding: 10px 0;
+    max-width: 305px;
+}
+
+.course_bottom a {
+    color: #813f8e;
+}
+
+/*------course_block------*/
+
+/*------course_cat------*/
+
+.courses_cat {
+    width: 100%;
+}
+
+.courses_cat_item {
+    line-height: 55px;
+    text-decoration: none;
+    color: #1e0f00;
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    max-width: 110px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.item0 {
+    background-color: #fee500;
+}
+
+.item1 {
+    background-color: #edac1a;
+}
+
+.item2 {
+    background-color: #cf2366;
+}
+
+.item3 {
+    background-color: #ab33a3;
+}
+
+/*------course_cat------*/
+
+
+/*------footer------*/
+
+footer {
+    background-color: #f7f7f7;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer_copyrights {
+    padding: 110px 0 30px 0;
+}
+
+.footer_container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1140px;
+}
+
+.footer_copyrights_left_block {
+    display: flex;
+    align-items: top;
+    width: 50%;
+}
+
+.footer_copyrights_logo {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer_copyrights_text {
+    line-height: 26px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 13px;
+}
+
+.footer_copyrights_right_block {
+    display: flex;
+    align-items: top;
+    width: 50%;
+}
+
+.footer_copyrights_logo2 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer_copyrights_text2 {
+    line-height: 22px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 13px;
+}
+
+.footer_copyrights_text2_title {
+    font-family: 'PFAgoraSlabProBold', Arial;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer_copyrights_logo2 img{
+    height: 40px;
+}
+
+.footer_links {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0 50px 0;
+}
+
+.footer_link_item {
+    line-height: 35px;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer_link_item_header {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer_links a:not(.footer_link_item_phone) {
+    display: block;
+    color: #1e0f00;
+    text-decoration: none;
+}
+
+.footer_links a:hover {
+    text-decoration: underline;
+}
+
+.footer_link_item_phone {
+    display: inline-block;
+    color: #1e0f00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*------footer------*/
+
+
+
+@font-face {
+    font-family: "PFAgoraSlabProRegular";
+    src: url(fonts/PFAgoraSlabProRegular.ttf);
+}
+
+@font-face {
+    font-family: "PFAgoraSlabProBold";
+    src: url(fonts/PFAgoraSlabProBold.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+        min-width: 540px
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        min-width: 720px
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+        min-width: 960px
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        min-width: 1140px
+    }
+}
+
